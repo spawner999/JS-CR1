@@ -7,8 +7,6 @@
 
 // bower install jquery --save
 
-// npm install dotenv --save
-
 var gulp = require('gulp'),
 browserify = require('browserify'),
 source = require('vinyl-source-stream'),
