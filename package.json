@@ -32,5 +32,8 @@
     "url": "https://github.com/spawner999/JS-Skeleton-Project/issues"
   },
   "homepage": "https://github.com/spawner999/JS-Skeleton-Project#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^2.0.0"
+  }
 }
