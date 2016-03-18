@@ -10,11 +10,11 @@ $(document).ready(function(){
     event.preventDefault();
     currentUser = $('#username').val();
     apiCall(createUrl(currentUser), getProfile);
-    $(document).ajaxComplete(function() {
-      $('#repos').click(function(event){
-        var value = 'repo';
-        apiCall(createUrl(currentUser, value), getRepos);
-      });
-});
+  });
+  $(document).ajaxComplete(function() {
+    $('#repos').click(function(){
+      var value = 'repo';
+      apiCall(createUrl(currentUser, value), getRepos);
+    });
   });
 });

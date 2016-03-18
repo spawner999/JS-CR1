@@ -1,23 +1,4 @@
 //MIXINS
-@mixin e($element) {
-	&__#{$element} {
-		@content;
-	}
-}
-
-@mixin m($modifier) {
-	&--#{$modifier} {
-		@content;
-	}
-}
-
-@mixin bg-img($url) {
-background-image: url($url);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-}
-
 @mixin container($width: 100%, $height: 100%, $padding: 0) {
   width: $width;
   height: $height;
@@ -32,10 +13,67 @@ background-size: cover;
   flex-flow: $flex-flow;
 }
 
-@mixin bg-setter($container, $child) {
-  .#{$container} {
-    > *:nth-child(#{$child}){
-      @include bg-img("../img/#{$child}.jpg");
-    }
+//STYLES
+* {
+  box-sizing: border-box;
+}
+
+.profile {
+  @include container(100%, 100%, 1em);
+  @include align-items(flex-start, center, column nowrap);
+  img {
+    border: 1px solid black;
   }
+}
+
+.gallery {
+  background: gray;
+}
+
+.repo {
+  color: white;
+  a{
+    color: #8275AE;
+  }
+	h4 {
+		margin: 0;
+	}
+  height: 150px;
+  lost-column: 1/1;
+  background: #2D2D38;
+  margin-bottom: 1em;
+  @include align-items(space-between, center, column nowrap);
+  @media screen and (min-width: 768px){
+    lost-column: 1/2 2 1em;
+  }
+  @media screen and (min-width: 1024px){
+    lost-column: 1/5 5 1em;
+  }
+}
+
+body{
+  @include container(100%, 100%, 1em);
+  background: #9E99AC;
+  color: #2D2D38;
+  text-align: center;
+}
+
+button{
+  font-size: 16px;
+  margin: 1em;
+  text-decoration: none;
+  border: 1px solid #2D2D38;
+  background: transparent;
+  padding: 0.5em;
+}
+
+label{
+  font-size: 1.2em;
+}
+
+input{
+  font-size: 1em;
+  border: transparent;
+  background: transparent;
+  padding: 0.5em;
 }

@@ -6,6 +6,7 @@
 // npm i -D browserify browser-sync vinyl-source-stream jshint gulp gulp-concat gulp-uglify del gulp-sass gulp-postcss autoprefixer gulp-sourcemaps gulp-jshint lost bower-files
 
 // bower install jquery --save
+// bower install moment --save
 
 var gulp = require('gulp'),
 browserify = require('browserify'),
